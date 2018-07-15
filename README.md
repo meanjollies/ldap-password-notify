@@ -21,7 +21,7 @@ If any errors are encountered during an account's check, such as a missing requi
 
 Logging is enabled by default with a rotation of 7 days, and is stored in the working directory from which `ldap-password-notify.rb` is run. Although its location and rotation time are not currently present in `config.yaml`, you can change that setup in `ldap-password-notify.rb`.
 
-There are two email templates under `conf/` that can be edited to your liking: `expired.erb` will be used for notifying accounts of their expired passwords, and `warn.erb` will be used for notifying accounts whose passwords have fallen within the warning threshold.
+There are two email templates under `conf/` that can be edited to your liking: `expired.erb` will be used for notifying accounts of their expired passwords, and `warn.erb` will be used for notifying accounts whose passwords have fallen within the warning threshold. SMTP is currently not configurable; notificants will attempted to be sent out using your local MTA.
 
 ### Usage
 
