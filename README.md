@@ -11,11 +11,11 @@ Prior to running, make sure `conf/config.yaml` is filled out. All parameters, ex
 * `sender`: This is the desired email address that notifications will appear to come from.
 * `blacklist`: A list of account UIDs that should be ignored. This might include any API accounts with non-expiring passwords, or accounts that lack the required attributes to perform a successful check. This is optional.
 * `ldap`
-** `hostname`: The hostname or IP address to connect to.
-** `port`: The port the LDAP server is listening on.
-** `username`: The binding LDAP account username. This must have the ability to read the password expiration attribute.
-** `password`: The binding LDAP account password.
-** `treebase`: The base DN where accounts reside.
+  * `hostname`: The hostname or IP address to connect to.
+  * `port`: The port the LDAP server is listening on.
+  * `username`: The binding LDAP account username. This must have the ability to read the password expiration attribute.
+  * `password`: The binding LDAP account password.
+  * `treebase`: The base DN where accounts reside.
 
 If any errors are encountered during an account's check, such as a missing required attribute, the audit will continue onto the next account.
 
