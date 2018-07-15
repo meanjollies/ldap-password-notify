@@ -1,0 +1,12 @@
+---
+
+exp_thresh: '7'
+sender: ''
+ldap:
+  hostname: 'localhost'
+  port:      '389'
+  username: 'cn=directory manager'
+  password: ''
+  treebase: 'ou=base,dc=example,dc=com'
+blacklist:
+  - ''
