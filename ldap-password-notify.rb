@@ -18,6 +18,7 @@ logger = Logger.new('ldap-password-notify.log', 7)
 
 directory = Audit.new(logger)
 
+# Read in configuration
 directory.blacklist = config['blacklist']
 directory.thresh = config['exp_thresh']
 directory.bind_user = config['ldap']['username']
@@ -27,5 +28,8 @@ directory.port = config['ldap']['port']
 directory.basedn = config['ldap']['treebase']
 directory.sender = config['sender']
 
+# Establish LDAP connection
 directory.connect
+
+# Run through the entire directory and check for password expiry
 directory.audit

@@ -7,6 +7,6 @@ ldap:
   port:      '389'
   username: 'cn=directory manager'
   password: ''
-  treebase: 'ou=base,dc=example,dc=com'
+  treebase: 'ou=People,dc=example,dc=com'
 blacklist:
   - ''

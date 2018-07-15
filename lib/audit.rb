@@ -34,6 +34,7 @@ class Audit
       begin
         @logger.info "===#{acct.uid.first}==="
 
+        # Skip over blacklisted UIDs
         if @blacklist.include? acct.uid.first
           @logger.warn "#{acct.uid.first}: Blacklisted. Skipping..."
           next
@@ -44,7 +45,7 @@ class Audit
         expire_days_left = expire_days_unix - @now_date
         notify_days_left = (expire_days_unix - @thresh.to_i) - @now_date
 
-        # Send notification email for threatened passwords, otherwise give a short summary
+        # Send notification email for threatened passwords, otherwise return the current state
         if expire_days_left <= @thresh.to_i
           if expire_days_left > -3
             notify(@logger, acct.givenname.first, acct.uid.first, acct.mail.first, expire_days_left, @sender)
