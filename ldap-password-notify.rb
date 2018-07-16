@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 # Title:  ldap-password-notify.rb
-# Descr:  Check the expiration status of users' paswords in LDAP. An email notification will be sent
-#         out in the event a user's password will soon or has expired.
+# Descr:  Check the expiration status of accounts' paswords in LDAP. An email notification will be sent
+#         out in the event a password will soon or has expired.
 # Author: Andrew O'Neill
 # Date:   2018
 
