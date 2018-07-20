@@ -33,7 +33,7 @@ It is recommended that this be used as part of a cronjob. It can be called from 
 
 * Dry runs
 * Verbosity. Currently, nothing is displayed in stdout, as everything gets sent to the log.
-* Allow for the configuration of the expiry attribute. Currently, `passwordExpirationTime` is used.
+* Allow for the configuration of the expiry attribute. Currently, only `passwordExpirationTime` is used.
 
 License
 ---
